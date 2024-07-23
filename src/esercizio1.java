@@ -2,7 +2,16 @@ import java.util.Scanner;
 
 public class esercizio1 {
     public static void main(String[] args) {
-        annoBisestile();
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("inserisci un anno:");
+        int anno = Integer.parseInt(scanner.nextLine());
+        if (annoBisestile(anno) == true) {
+            System.out.println("l'anno è bisestile");
+
+        } else {
+            System.out.println("l'anno non è bisestile");
+        }
     }
 
 
@@ -20,15 +29,16 @@ public class esercizio1 {
         }
     }
 
+    public static void calcoloBisestile() {
 
-    public static void annoBisestile() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("inserisci un anno:");
-        int anno = Integer.parseInt(scanner.nextLine());
+    }
+
+    public static boolean annoBisestile(int anno) {
+
         if (anno % 400 == 0 || (anno % 4 == 0 && !(anno % 100 == 0))) {
-            System.out.println("lanno è bisestile");
+            return true;
         } else {
-            System.out.println("l'anno non è bisestile");
+            return false;
         }
 
     }
