@@ -2,8 +2,9 @@ import java.util.Scanner;
 
 public class esercizio1 {
     public static void main(String[] args) {
-        pariDispari();
+        annoBisestile();
     }
+
 
     public static void pariDispari() {
         Scanner scanner = new Scanner(System.in);
@@ -17,6 +18,19 @@ public class esercizio1 {
         } else {
             System.out.println("il numero totale delle lettere è dispari");
         }
+    }
+
+
+    public static void annoBisestile() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("inserisci un anno:");
+        int anno = Integer.parseInt(scanner.nextLine());
+        if (anno % 400 == 0 || (anno % 4 == 0 && !(anno % 100 == 0))) {
+            System.out.println("lanno è bisestile");
+        } else {
+            System.out.println("l'anno non è bisestile");
+        }
+
     }
 }
 
